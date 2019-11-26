@@ -50,7 +50,7 @@ Héctor J. Martínez (IATE-OAC-UNC)
 Martín de los Rios (ICTP-SAIFR/IFT-UNESP) <div itemscope itemtype="https://schema.org/Person">
   <a itemprop="sameAs"  href="https://orcid.org/0000-0003-2190-2196" target="orcid.widget" rel="noopener noreferrer" style="vertical-align:top;">
     <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">
-    https://orcid.org/0000-0003-2190-2196</a></div>
+    </a></div>
 
 
 Valeria Coenda (IATE-OAC-UNC)
