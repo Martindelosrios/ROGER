@@ -1,4 +1,4 @@
-# pratto is an R package for the automatic classification of galaxies using their phase-space information.
+# ROGER is an R package for the automatic classification of galaxies using their phase-space information.
 
 # Prerequisites
 
@@ -16,14 +16,14 @@ You can install the pratto package directly from your R session using the ```ins
 
 ``` R
 library('devtools')
-install_github('MartindelosRios/pratto')
+install_github('MartindelosRios/ROGER')
 ```
 
 # Example
 
 ``` R
 # Loading the pratto library.
-library('pratto')
+library('ROGER')
 
 # Loading the data
 data('testset')
