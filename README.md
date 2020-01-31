@@ -22,7 +22,7 @@ install_github('MartindelosRios/ROGER')
 # Example
 
 ``` R
-# Loading the pratto library.
+# Loading the ROGER library.
 library('ROGER')
 
 # Loading the data

@@ -4,7 +4,7 @@
 \alias{get_class}
 \title{A function to get the classification of each galaxy in a catalog.}
 \usage{
-get_class(cat, model)
+get_class(cat, model, type = "prob", threshold = 0)
 }
 \arguments{
 \item{cat:}{Data frame with the galaxy catalog. It should have as columns the
@@ -13,6 +13,10 @@ cluster ('r') and the line-of-sight velocity relative to the cluster
 normalized to the line-of-sight velocity of the cluster ('v').}
 
 \item{model:}{Machine Learning model to be used for the classification.}
+
+\item{type:}{Output of the machine learning algorithm. Either 'prob' for probabilities or 'raw' for the most probable class. Default 'prob'.}
+
+\item{threshold:}{If type = 'prob' this is the probability threshold to determine the predicted class of a certain galaxy. If threshold = 0, the function returns the full probility vector. Default = 0.}
 }
 \description{
 This function allows you to estimate the orbital classification of each galaxy
