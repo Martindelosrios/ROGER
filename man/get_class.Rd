@@ -22,6 +22,9 @@ normalized to the line-of-sight velocity of the cluster ('v').}
 This function allows you to estimate the orbital classification of each galaxy
  inside a catalog using phase-space information.
 }
+\details{
+model: There are 3 available models. knn for a K-nearest neighbour, svm for a Support Vector Machine and rf for a Random Forest. See XXXX.XXXX for more ddetails on the models.
+}
 \examples{
 get_class(cat, knn, type = 'prob', threshold = 0.5)
 }

@@ -9,7 +9,7 @@
 #' @param model: Machine Learning model to be used for the classification.
 #' @param type: Output of the machine learning algorithm. Either 'prob' for probabilities or 'raw' for the most probable class. Default 'prob'.
 #' @param threshold: If type = 'prob' this is the probability threshold to determine the predicted class of a certain galaxy. If threshold = 0, the function returns the full probility vector. Default = 0.
-#' @Details model: There are 3 available models. knn for a K-nearest neighbour, svm for a Support Vector Machine and rf for a Random Forest. See XXXX.XXXX for more ddetails on the models.
+#' @details model: There are 3 available models. knn for a K-nearest neighbour, svm for a Support Vector Machine and rf for a Random Forest. See XXXX.XXXX for more ddetails on the models.
 #' @export
 #' @examples
 #' get_class(cat, knn, type = 'prob', threshold = 0.5)
