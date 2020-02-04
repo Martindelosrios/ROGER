@@ -11,7 +11,7 @@
 #' @param threshold: If type = 'prob' this is the probability threshold to determine the predicted class of a certain galaxy. If threshold = 0, the function returns the full probility vector. Default = 0.
 #' @export
 #' @examples
-#' get_class(cat, all_vs_all_KNN)
+#' get_class(cat, knn, type = 'prob', threshold = 0.5)
 
 get_class <- function(cat, model, type = 'prob', threshold = 0){
 

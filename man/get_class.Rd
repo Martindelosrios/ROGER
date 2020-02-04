@@ -23,5 +23,5 @@ This function allows you to estimate the orbital classification of each galaxy
  inside a catalog using phase-space information.
 }
 \examples{
-get_class(cat, all_vs_all_KNN)
+get_class(cat, knn, type = 'prob', threshold = 0.5)
 }

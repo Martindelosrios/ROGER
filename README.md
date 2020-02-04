@@ -2,12 +2,12 @@
 
 # Prerequisites
 
-This software make an extensive usage of the following packages that must be installed: ```caret```
+This software make an extensive usage of the following packages that must be installed: ```caret, randomForest, kernlab```
 
 You can install this packages inside an R-session with:
 
 ```R
-install.packages(c('caret'))
+install.packages(c('caret', 'randomForest', 'kernlab'))
 ``` 
 
 # Installation
