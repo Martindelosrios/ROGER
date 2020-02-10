@@ -40,7 +40,8 @@ real_class <- testset$flag1
 # Let's predict the proabability of being of each class using our ML
 pred_prob <- get_class(cat, knn)
 ```
-
+In the [Examples](https://github.com/Martindelosrios/ROGER/tree/master/Examples) section you can find more
+examples!
 # Authors
 Héctor J. Martínez (IATE-OAC-UNC)
 
