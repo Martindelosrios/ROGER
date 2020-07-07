@@ -18,6 +18,10 @@ get_class <- function(cat, model, type = 'prob', threshold = 0){
 
   model_predictions <- predict(model, newdata = cat, type = type)
 
+  if(model == svm){
+    model_predictions <- as.data.frame(model_predictions)
+  }
+
   if((type == 'prob') & (threshold > 0)){
     class   <- 1:length(model_predictions$X1)
     class[] <- -99 
