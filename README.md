@@ -12,7 +12,7 @@ install.packages(c('caret', 'randomForest', 'kernlab'))
 
 # Installation
 
-You can install the pratto package directly from your R session using the ```install_github``` function from the ```devtools``` package.
+You can install the ROGER package directly from your R session using the ```install_github``` function from the ```devtools``` package.
 
 ``` R
 library('devtools')
