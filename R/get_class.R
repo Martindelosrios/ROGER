@@ -7,7 +7,7 @@
 #'             cluster ('r') and the line-of-sight velocity relative to the cluster
 #'             normalized to the line-of-sight velocity of the cluster ('v').
 #' @param model: Machine Learning model to be used for the classification.
-#' @param type: Output of the machine learning algorithm. Either 'prob' for probabilities or 'raw' for the most probable class. Default 'prob'.
+#' @param type: Output of the machine learning algorithm. Either 'prob' for probabilities or 'class' for the most probable class. Default 'prob'.
 #' @param threshold: If type = 'prob' this is the probability threshold to determine the predicted class of a certain galaxy. If threshold = 0, the function returns the full probility vector. Default = 0.
 #' @details model: There are 3 available models. knn for a K-nearest neighbour, svm for a Support Vector Machine and rf for a Random Forest. See XXXX.XXXX for more ddetails on the models.
 #' @export
@@ -16,20 +16,28 @@
 
 get_class <- function(cat, model, type = 'prob', threshold = 0){
 
-  model_predictions <- as.data.frame(predict(model, newdata = cat, type = type))
-
-  if((type == 'prob') & (threshold > 0)){
-    class   <- 1:length(model_predictions$X1)
-    class[] <- -99 
-    for(i in 1:length(model_predictions$X1)){
-      mpc <- which.max(model_predictions[i,])
-      if(model_predictions[i, mpc] > threshold){
-        class[i] <- paste0('X', toString(mpc))
-      } else{
-        class[i] <- 'NA'
+  if(type == 'prob'){
+    model_predictions <- as.data.frame(predict(model, newdata = cat, type = type))
+    if(threshold > 0){
+      class   <- 1:length(model_predictions$X1)
+      class[] <- -99 
+      for(i in 1:length(model_predictions$X1)){
+        mpc <- which.max(model_predictions[i,])
+        if(model_predictions[i, mpc] > threshold){
+          class[i] <- paste0('X', toString(mpc))
+        } else{
+          class[i] <- 'NA'
+        }
       }
+      model_predictions <- as.data.frame(class)
+      colnames(model_predictions) <- c('pred_class')
+    } else if (threshold == 0){
+      colnames(model_predictions) <- c('CL', 'BS', 'IN', 'RIN', 'ITL')
     }
-    model_predictions <- class
+  } else if (type == 'class'){
+    model_predictions <- as.data.frame(predict(model, newdata = cat))
+    colnames(model_predictions) <- c('pred_class')
+
   }
 
   return(model_predictions)

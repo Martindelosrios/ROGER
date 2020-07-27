@@ -14,7 +14,7 @@ normalized to the line-of-sight velocity of the cluster ('v').}
 
 \item{model:}{Machine Learning model to be used for the classification.}
 
-\item{type:}{Output of the machine learning algorithm. Either 'prob' for probabilities or 'raw' for the most probable class. Default 'prob'.}
+\item{type:}{Output of the machine learning algorithm. Either 'prob' for probabilities or 'class' for the most probable class. Default 'prob'.}
 
 \item{threshold:}{If type = 'prob' this is the probability threshold to determine the predicted class of a certain galaxy. If threshold = 0, the function returns the full probility vector. Default = 0.}
 }
