@@ -24,14 +24,17 @@ get_class <- function(cat, model, type = 'prob', threshold = 0){
       for(i in 1:length(model_predictions$X1)){
         mpc <- which.max(model_predictions[i,])
         if(model_predictions[i, mpc] > threshold){
-          class[i] <- paste0('X', toString(mpc))
+          if(mpc == 1){class[i] <- 'CL'}
+          if(mpc == 2){class[i] <- 'BS'}
+          if(mpc == 3){class[i] <- 'IN'}
+          if(mpc == 4){class[i] <- 'RIN'}
+          if(mpc == 5){class[i] <- 'ITL'}
         } else{
           class[i] <- 'NA'
         }
       }
       model_predictions <- as.data.frame(class)
       colnames(model_predictions) <- c('pred_class')
-      levels(model_predictions$pred_class) <- c('CL', 'BS', 'IN', 'RIN', 'ITL')
     } else if (threshold == 0){
       colnames(model_predictions) <- c('CL', 'BS', 'IN', 'RIN', 'ITL')
     }
