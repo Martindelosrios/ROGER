@@ -30,6 +30,7 @@ get_class <- function(cat, model, type = 'prob', threshold = 0){
         }
       }
       model_predictions <- as.data.frame(class)
+      levels(model_predictions$pred_class) <- c('CL', 'BS', 'IN', 'RIN', 'ITL')
       colnames(model_predictions) <- c('pred_class')
     } else if (threshold == 0){
       colnames(model_predictions) <- c('CL', 'BS', 'IN', 'RIN', 'ITL')
