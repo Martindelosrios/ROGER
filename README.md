@@ -34,7 +34,7 @@ str(testset)
 # Let's keep only with the 'r' and 'v' columns that will be used to predict, and
 # save the real classification for future comparison.
 
-cat        <- testset[, c(4,5)]
+cat        <- testset[, c(1,2)]
 real_class <- testset$flag1
 
 # Let's predict the proabability of being of each class using our ML
