@@ -57,7 +57,7 @@ Hernán Muriel (IATE-OAC-UNC)
 Andrés N. Ruiz (IATE-OAC-UNC)
 
 
-Cristian Vega (CCT-UNLP)
+Cristian Vega (UNLS)
 
 
 Sofía Cora (CCT-UNLP)
