@@ -1,5 +1,7 @@
 # ROGER is an R package for the automatic classification of galaxies using their phase-space information.
 
+For more details about the training and calibration of ROGER please read https://arxiv.org/abs/2010.11959v1
+
 # Prerequisites
 
 This software make an extensive usage of the following packages that must be installed: ```caret, randomForest, kernlab```
@@ -68,3 +70,6 @@ Cristian Vega (UNLS)
 Sofía Cora (CCT-UNLP)
 
 
+# Citation
+
+If you use this software please cite https://arxiv.org/abs/2010.11959v1
