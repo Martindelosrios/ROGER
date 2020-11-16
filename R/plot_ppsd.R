@@ -32,11 +32,13 @@ plot_ppsd <- function(cl, bs, ing, rin, int, dens = TRUE, cl0 = cl_gal0, bs0 = b
   ing  <- espejo(ing)
   rin  <- espejo(rin)
   int  <- espejo(int)
-  cl0  <- espejo(cl0)
-  bs0  <- espejo(bs0)
-  ing0 <- espejo(ing0)
-  rin0 <- espejo(rin0)
-  int0 <- espejo(int0)
+  if(reference == TRUE){
+    cl0  <- espejo(cl0)
+    bs0  <- espejo(bs0)
+    ing0 <- espejo(ing0)
+    rin0 <- espejo(rin0)
+    int0 <- espejo(int0)
+  }
 
 
   p0 <- ggplot(data = cl, aes(r, v)) +
