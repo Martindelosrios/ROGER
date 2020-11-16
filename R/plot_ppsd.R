@@ -27,6 +27,16 @@
 
 plot_ppsd <- function(cl, bs, ing, rin, int, dens = TRUE, cl0 = cl_gal0, bs0 = bs_gal0, ing0 = in_gal0, rin0 = rin_gal0, int0 = int_gal0, reference = FALSE, hist_bins_x = 25, hist_bins_y = 20, geom = 'line'){
 
+  c1 <- rgb(185/255, 18/255, 40/255,1)   #b91228
+  # backsplash
+  c2 <- rgb(255/255,133/255,27/255,1)    #ff851b
+  # infall 
+  c3 <- rgb(95/255, 75/255, 139/255,1)   #5f4b8b
+  # recent infallers
+  c4 <- rgb(61/255, 153/255, 112/255,1)  #3d9970
+  # interloopers
+  c5 <- '#808080'
+
   cl   <- espejo(cl)
   bs   <- espejo(bs)
   ing  <- espejo(ing)
