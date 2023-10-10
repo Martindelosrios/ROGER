@@ -91,7 +91,13 @@ plot_ppsd <- function(cl, bs, ing, rin, int, dens = TRUE, cl0 = cl_gal0, bs0 = b
       scale_colour_gradient(low =  rgb(1,1,1,0.0), high = c1)+
       new_scale_fill()+
       geom_density_2d_filled(data = cl, aes(x = r , y = v, alpha = ..level.., fill = ..level..), lwd = 1, bins = 6) + 
-      scale_fill_manual(values = c('#ffffff','#f1cfd4','#e3a0a9','#d5707e','#c74153','#b91228'))+
+      #scale_fill_manual(values = c('#ffffff','#f1cfd4','#e3a0a9','#d5707e','#c74153','#b91228'))+
+      scale_fill_manual(values = c(
+                "#ffffff", "#f1cfd4", "#e3a0a9", "#d5707e", "#c74153", "#b91228",
+                "#ffffff", "#f1cfd4", "#e3a0a9", "#d5707e", "#c74153", "#b91228",
+                "#ffffff", "#f1cfd4", "#e3a0a9", "#d5707e", "#c74153", "#b91228",
+                "#ffffff", "#f1cfd4", "#e3a0a9", "#d5707e", "#c74153", "#b91228"
+                )) + 
  
       theme(text = element_text(family = "serif"),
             axis.text.x      = element_text(size=15),
